@@ -10,6 +10,15 @@ addMoney.addEventListener("click", function (e) {
 
   const amount = parseInt(document.getElementById("add-amount").value);
 
+  // pin related working start
+  const enteredPin = document.getElementById("add-pin").value.trim();
+  const savedPin = localStorage.getItem("userPin");
+
+  if (enteredPin !== savedPin) {
+    alert("you are giving a wrong pin");
+    return;
+  }
+
   const availableBalanceElement = document.getElementById("available-Balance");
   const availableBalance = parseInt(availableBalanceElement.innerText);
 
