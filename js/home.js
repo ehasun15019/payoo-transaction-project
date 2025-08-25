@@ -30,7 +30,9 @@ addMoney.addEventListener("click", function (e) {
 
   const totalNewBalance = amount + availableBalance;
 
-  availableBalanceElement.innerText = totalNewBalance;
+  if ((availableBalanceElement.innerText = totalNewBalance)) {
+    alert("Money added in mai balance");
+  }
 
   localStorage.setItem("balance", totalNewBalance);
 });
