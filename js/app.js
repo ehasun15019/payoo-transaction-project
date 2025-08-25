@@ -1,5 +1,3 @@
-// login button functionality
-
 const loginSystem = document.getElementById("login-btn");
 
 loginSystem.addEventListener("click", function (e) {

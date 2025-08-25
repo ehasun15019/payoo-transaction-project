@@ -47,3 +47,10 @@ window.addEventListener("load", () => {
   }
 });
 /* ================= Add Money Working End ================= */
+
+// reset button
+document.getElementById("reset-btn").addEventListener("click", () => {
+  localStorage.removeItem("userPin");
+  alert("Password reset! Please login again.");
+  window.location.href = "./index.html";
+});
