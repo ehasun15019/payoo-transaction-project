@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>payoo-home</title>
+    <!-- Daisy Ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awsome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#f4f5f7]">
+    <div class="max-w-lg mx-auto bg-white rounded-b-xl">
+      <div
+        class="min-h-[50px] flex justify-between items-center border-b-1 border-gray-400 p-3"
+      >
+        <div class="flex gap-3">
+          <img src="./assets/Group.png" alt="group" class="h-[50px]" />
+
+          <div>
+            <h2 class="font-bold">
+              $ <span id="available-Balance">45000</span>
+            </h2>
+            <p>Available Balance</p>
+          </div>
+        </div>
+        <div>
+          <button class="btn btn-soft">
+            <i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i> Log
+            out
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-8 p-4">
+        <h1 class="font-bold text-2xl">🔥 Welcome to Payooo!</h1>
+        <p>
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+      </div>
+
+      <div class="min-h-[200px] grid grid-cols-3 gap-4 p-4">
+        <div class="border border-gray-500 rounded-xl p-3 text-center">
+          <img src="./assets/wallet1.png" alt="wallet1" class="mx-auto" />
+          <h2>Add Money</h2>
+        </div>
+
+        <div class="border border-gray-500 rounded-xl p-3 text-center">
+          <img src="./assets/send1.png" alt="send1" class="mx-auto" />
+          <h2>Cashout</h2>
+        </div>
+
+        <div class="border border-gray-500 rounded-xl p-3 text-center">
+          <img src="./assets/money1.png" alt="money1" class="mx-auto" />
+          <h2>Transfer Money</h2>
+        </div>
+
+        <div class="border border-gray-500 rounded-xl p-3 text-center">
+          <img src="./assets/bonus1.png" alt="bonus1" class="mx-auto" />
+          <h2>Get Bonus</h2>
+        </div>
+
+        <div class="border border-gray-500 rounded-xl p-3 text-center">
+          <img src="./assets/purse1.png" alt="purse1" class="mx-auto" />
+          <h2>Pay Bill</h2>
+        </div>
+
+        <div class="border border-gray-500 rounded-xl p-3 text-center">
+          <img
+            src="./assets/transaction1.png"
+            alt="transaction1"
+            class="mx-auto"
+          />
+          <h2>Transactions</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="all-from-section max-w-lg mx-auto">
+      <!-- Add money -->
+      <div>
+        <h1 class="my-3 font-semibold">Add Money</h1>
+
+        <form action="" class="bg-white rounded-2xl p-8">
+          <div>
+            <label for="" class="font-semibold">Select A Bank</label>
+            <br />
+            <select
+              class="select bg-[f4f5f7] rounded-3xl w-full mt-3"
+              id="bank"
+            >
+              <option>Select a Band</option>
+              <option>DBBL</option>
+              <option>AB Bank</option>
+              <option>Islami Bank</option>
+            </select>
+          </div>
+
+          <div class="mt-4">
+            <label for="" class="font-semibold">Bank Account Number</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 11 digit account number"
+              class="input bg-[#f4f5f7] rounded-3xl mt-3 w-full"
+              id="bank-account-number"
+            />
+          </div>
+
+          <div class="mt-4">
+            <label for="" class="font-semibold">Amount to Add</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Add Amount to withdraw"
+              class="input bg-[#f4f5f7] rounded-3xl mt-3 w-full"
+              id="add-amount"
+            />
+          </div>
+
+          <div class="mt-4">
+            <label for="" class="font-semibold">Pin Number</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="input bg-[#f4f5f7] rounded-3xl mt-3 w-full"
+              id="add-pin"
+            />
+          </div>
+
+          <div class="mt-3">
+            <button
+              class="btn bg-[#0874f2] text-white w-full rounded-3xl"
+              id="add-money"
+            >
+              Add Money
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+const addMoney = document.getElementById("add-money");
+
+addMoney.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const bank = document.getElementById("bank").value;
+
+  // Bank Account Number
+  const bankAccNum = document.getElementById("bank-account-number").value;
+
+  const amount = parseInt(document.getElementById("add-amount").value);
+
+  const availableBalanceElement = document.getElementById("available-Balance");
+  const availableBalance = parseInt(availableBalanceElement.innerText);
+
+  // checking bank account 11 digit
+  if (bankAccNum.length !== 11) {
+    alert("Enter valid 11 digit bank account");
+    return;
+  }
+
+  const totalNewBalance = amount + availableBalance;
+
+  availableBalanceElement.innerText = totalNewBalance;
+
+  localStorage.setItem("balance", totalNewBalance);
+});
+
+// page load এ আগের balance load করা
+window.addEventListener("load", () => {
+  const availableBalanceElement = document.getElementById("available-Balance");
+  const savedBalance = localStorage.getItem("balance");
+  if (savedBalance) {
+    availableBalanceElement.innerText = savedBalance;
+  }
+});
