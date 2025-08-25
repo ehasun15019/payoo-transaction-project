@@ -12,20 +12,30 @@ const transfer_money_section = document.getElementById(
   "transfer_money_section"
 );
 
+const get_coupon_section = document.getElementById("get_coupon_section");
+
 // Function to show a tab and save to localStorage
 function showTab(tabName) {
   if (tabName === "add_money") {
     add_money_section.style.display = "block";
     cash_out_section.style.display = "none";
     transfer_money_section.style.display = "none";
+    get_coupon_section.style.display = "none";
   } else if (tabName === "cashout") {
     add_money_section.style.display = "none";
     cash_out_section.style.display = "block";
     transfer_money_section.style.display = "none";
+    get_coupon_section.style.display = "none";
   } else if (tabName === "transfer_money") {
     add_money_section.style.display = "none";
     cash_out_section.style.display = "none";
     transfer_money_section.style.display = "block";
+    get_coupon_section.style.display = "none";
+  } else if (tabName === "get_coupon") {
+    get_coupon_section.style.display = "block";
+    add_money_section.style.display = "none";
+    cash_out_section.style.display = "none";
+    transfer_money_section.style.display = "none";
   }
 
   localStorage.setItem("activeTab", tabName); // Save active tab
@@ -38,3 +48,4 @@ showTab(lastTab);
 add_money_tab.addEventListener("click", () => showTab("add_money"));
 cashout_tab.addEventListener("click", () => showTab("cashout"));
 transfer_money_tab.addEventListener("click", () => showTab("transfer_money"));
+get_bonous_tab.addEventListener("click", () => showTab("get_coupon"));
